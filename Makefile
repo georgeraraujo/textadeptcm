@@ -4,22 +4,18 @@ TARGETOS = BOTH
 lflags  = /NODEFAULTLIB /INCREMENTAL:NO /RELEASE /NOLOGO
 dlllflags = $(lflags) -entry:_DllMainCRTStartup$(DLLENTRY) -dll
 
-all: wscitecm.dll
+all: textadeptcm.dll
 
-wscitecm.dll: wscitecm.obj wscitecm.res
-	$(implib) -machine:$(CPU) -def:wscitecm.def $** -out:wscitecm.lib
-	$(link) $(dlllflags) -base:0x1C000000 -out:$*.dll $** $(olelibsdll) shell32.lib msvcrt.lib wscitecm.lib comctl32.lib wscitecm.exp
+textadeptcm.dll: textadeptcm.obj textadeptcm.res
+	$(implib) -machine:$(CPU) -def:textadeptcm.def $** -out:textadeptcm.lib
+	$(link) $(dlllflags) -base:0x1C000000 -out:$*.dll $** $(olelibsdll) shell32.lib msvcrt.lib textadeptcm.lib comctl32.lib textadeptcm.exp
 	mt -manifest $*.manifest -outputresource:$*.dll;2
 
 .cpp.obj:
 	$(cc) $(cflags) $(cvarsdll) $*.cpp
 
-wscitecm.res: wscitecm.rc
-	$(rc) $(rcflags) $(rcvars) wscitecm.rc
+textadeptcm.res: textadeptcm.rc
+	$(rc) $(rcflags) $(rcvars) textadeptcm.rc
 
 clean:
-	-1 del wscitecm.dll wscitecm.lib wscitecm.dll.manifest wscitecm.obj wscitecm.exp wscitecm.res
-
-zip:
-	-1 del *.zip
-	perl abpack.pl
+	-1 del textadeptcm.dll textadeptcm.lib textadeptcm.dll.manifest textadeptcm.obj textadeptcm.exp textadeptcm.res

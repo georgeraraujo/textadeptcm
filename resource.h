@@ -1,10 +1,10 @@
 //{{NO_DEPENDENCIES}}
 // Microsoft Developer Studio generated include file.
-// Used by wscitecm.rc
+// Used by textadeptcm.rc
 //
 
-#define IDI_SCITE                       101
-#define IDB_SCITE                       102
+#define IDI_TEXTADEPT                       101
+#define IDB_TEXTADEPT                       102
 
 // Next default values for new objects
 //

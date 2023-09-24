@@ -1,0 +1,10 @@
+;textadeptcm.def : Declares the module parameters for the DLL.
+
+LIBRARY      textadeptcm
+;DESCRIPTION  'Textadept Shell Extension'
+
+EXPORTS
+  DllCanUnloadNow PRIVATE
+  DllGetClassObject PRIVATE
+  DllRegisterServer PRIVATE
+  DllUnregisterServer PRIVATE
