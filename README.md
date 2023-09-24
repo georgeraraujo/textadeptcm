@@ -50,7 +50,7 @@ If you try to delete or override the dll file and you get the error **Access is 
 - Open a command line window
 - Type CTRL+ALT+DEL to display the Windows Task Manager, display the Process tab and "kill" the explorer.exe process.
 - If Windows Exlorer does not restart automatically, start it manually from  the command line window (c:/>explorer).
-- Delete or override  textadeptcm.dll before using the context menu (Example: "C:/>cp textadeptcm.dll <textadept_directory>").
+- Delete or override  textadeptcm.dll before using the context menu (Example: "C:\>copy textadeptcm.dll <textadept_directory>").
 
 
 Build
